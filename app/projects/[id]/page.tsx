@@ -8,6 +8,8 @@ import SiteNav from "../../../components/SiteNav";
 import type { Metadata } from "next";
 import ProjectGallery from "../../../components/ProjectGallery";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({
   params,
 }: {

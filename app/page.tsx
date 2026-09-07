@@ -5,6 +5,8 @@ import { techColor } from "../lib/techColor";
 import PageBackground from "../components/PageBackground";
 import SiteNav from "../components/SiteNav";
 
+export const revalidate = 3600;
+
 export default async function Home() {
   const projects = await prisma.project.findMany({ orderBy: { createdAt: "desc" } });
 
