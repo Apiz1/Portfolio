@@ -6,39 +6,94 @@ const prisma = new PrismaClient({ adapter });
 
 async function main() {
   await prisma.project.deleteMany();
-
   await prisma.project.createMany({
     data: [
       {
         title: "11 Hair Studio",
-        description: "Salon booking management system with three roles (Admin, Staff, Customer). Features real-time booking conflict detection, a two-table earnings architecture, Cloudflare Turnstile CAPTCHA, and automated email notifications via Laravel Mailable.",
+        description:
+          "Salon booking management system with three roles (Admin, Staff, Customer). Features real-time booking conflict detection, a two-table earnings architecture, Cloudflare Turnstile CAPTCHA, and automated email notifications via Laravel Mailable.",
         techStack: ["Laravel", "MySQL", "Cloudflare Turnstile"],
-        imageUrls: ["/projects/hair-studio-1.png", "/projects/hair-studio-2.png", "/projects/hair-studio-3.png"],
+        imageUrls: [
+          "/projects/hair-studio-1.png",
+          "/projects/hair-studio-2.png",
+          "/projects/hair-studio-3.png",
+        ],
         projectUrl: null,
         githubUrl: null,
         featured: true,
       },
       {
         title: "SmileCare: Dental Management System",
-        description: "Architected a multi-role (admin/staff/doctor) clinic management platform from a 12+ table ERD, with role-based access control. Features a conflict-aware appointment booking engine with double-booking prevention, doctor leave validation, dynamic AJAX time-slot generation, and a full queue workflow (waiting to called to serving to done/skipped). Includes medical records, prescriptions, and printable appointment letters.",
+        description:
+          "Architected a multi-role (admin/staff/doctor) clinic management platform from a 12+ table ERD, with role-based access control. Features a conflict-aware appointment booking engine with double-booking prevention, doctor leave validation, dynamic AJAX time-slot generation, and a full queue workflow (waiting to called to serving to done/skipped). Includes medical records, prescriptions, and printable appointment letters.",
         techStack: ["Laravel 12", "Jetstream", "Livewire", "PostgreSQL"],
-        imageUrls: ["/projects/dental-clinic-1.png", "/projects/dental-clinic-2.png", "/projects/dental-clinic-3.png"],
+        imageUrls: [
+          "/projects/dental-clinic-1.png",
+          "/projects/dental-clinic-2.png",
+          "/projects/dental-clinic-3.png",
+        ],
         projectUrl: null,
         githubUrl: null,
         featured: true,
       },
       {
         title: "GymFinder.My: Gym Directory & Search Platform",
-        description: "A Perak-focused gym directory built on a 20+ table PostgreSQL schema, supporting three roles: user, gym owner, and super admin. Features a gym owner registration and admin approval workflow with approve, reject, and suspend actions. Fully containerized with Docker (Laravel Sail) running under WSL Ubuntu, with a React front end served via Inertia.js.",
-        techStack: ["Laravel 12", "React (Inertia.js)", "Tailwind CSS", "PostgreSQL", "Docker (Laravel Sail)", "WSL Ubuntu"],
-        imageUrls: ["/projects/gymfinder-1.png", "/projects/gymfinder-2.png", "/projects/gymfinder-3.png"],
+        description:
+          "A Perak-focused gym directory built on a 20+ table PostgreSQL schema, supporting three roles: user, gym owner, and super admin. Features a gym owner registration and admin approval workflow with approve, reject, and suspend actions. Fully containerized with Docker (Laravel Sail) running under WSL Ubuntu, with a React front end served via Inertia.js.",
+        techStack: [
+          "Laravel 12",
+          "React (Inertia.js)",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "Docker (Laravel Sail)",
+          "WSL Ubuntu",
+        ],
+        imageUrls: [
+          "/projects/gymfinder-1.png",
+          "/projects/gymfinder-2.png",
+          "/projects/gymfinder-3.png",
+          "/projects/gymfinder-4.png",
+          "/projects/gymfinder-5.png",
+          "/projects/gymfinder-6.png",
+          "/projects/gymfinder-7.png",
+          "/projects/gymfinder-8.png",
+          "/projects/gymfinder-9.png",
+          "/projects/gymfinder-10.png",
+        ],
+        projectUrl: null,
+        githubUrl: null,
+        featured: true,
+      },
+      {
+        title: "Tukang Perak: Local Service Marketplace",
+        description:
+          "A Perak-scoped marketplace connecting customers with local service providers (tukang), with three roles: customer, provider, and admin. Built an end-to-end escrow payment flow via Billplz — funds are held after booking, released when the customer confirms completed work, or routed to an admin for dispute resolution. Includes real-time per-booking chat (Laravel Reverb + Echo), an in-app and email notification system covering the full booking lifecycle, a provider approval workflow (pending/approved/rejected/suspended), hourly and fixed-price bookings, reviews with provider replies, and a 48-hour auto-confirm scheduled job. Covered by automated tests, including a policy layer for booking authorization.",
+        techStack: [
+          "Laravel 12",
+          "Inertia.js",
+          "React",
+          "PostgreSQL",
+          "Laravel Reverb",
+          "Billplz",
+          "Docker (Laravel Sail)",
+        ],
+        imageUrls: [ "/projects/tukang-perak-1.png",
+          "/projects/tukang-perak-2.png",
+          "/projects/tukang-perak-3.png",
+          "/projects/tukang-perak-4.png",
+          "/projects/tukang-perak-5.png",
+          "/projects/tukang-perak-6.png",
+          "/projects/tukang-perak-7.png",
+          "/projects/tukang-perak-8.png",
+          "/projects/tukang-perak-9.png",
+          "/projects/tukang-perak-10.png",],
         projectUrl: null,
         githubUrl: null,
         featured: true,
       },
     ],
   });
-  console.log("Seeded 3 projects.");
+  console.log("Seeded 4 projects.");
 }
 
 main()

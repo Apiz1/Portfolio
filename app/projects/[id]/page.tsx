@@ -28,7 +28,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const project = await prisma.project.findUnique({ where: { id: Number(id) } });
   if (!project) notFound();
-  const images = project.imageUrls.slice(0, 3);
+  const images = project.imageUrls.slice(0, 10);
 
 
   return (
@@ -67,3 +67,4 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
 function SectionHeading({ eyebrow, title, count, id }: { eyebrow: string; title: string; count?: string; id: string }) { return <div className="flex items-end justify-between gap-4"><div><p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-brass">{eyebrow}</p><h2 id={id} className="mt-2 font-display text-4xl tracking-[-0.03em] text-[#f8fafc]">{title}</h2></div>{count && <span className="font-mono text-xs font-medium text-[#b8cad6]">{count}</span>}</div>; }
 function ProjectLink({ href, label, text }: { href: string; label: string; text: string }) { return <a href={href} target="_blank" rel="noreferrer" className="group rounded-xl border border-blueprint-line/80 bg-blueprint/35 p-5 transition hover:border-brass/70 hover:bg-blueprint/55"><p className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-[#b8cad6]">{label}</p><p className="mt-3 text-lg font-semibold text-[#f8fafc] transition group-hover:text-brass">{text} <span aria-hidden="true">↗</span></p></a>; }
+
