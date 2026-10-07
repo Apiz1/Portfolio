@@ -58,7 +58,6 @@ async function main() {
           "/projects/gymfinder-7.png",
           "/projects/gymfinder-8.png",
           "/projects/gymfinder-9.png",
-          "/projects/gymfinder-10.png",
         ],
         projectUrl: null,
         githubUrl: null,
